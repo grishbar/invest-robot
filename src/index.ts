@@ -32,9 +32,6 @@ app.get('/api/hello', (req: Request, res: Response) => {
 });
 
 app.post('/api/test-token', async (req: Request, res: Response) => {
-  console.log(req.body);
-  console.log('process.env.TOKEN', process.env.TOKEN);
-
   if (process.env.TOKEN) {
     res.status(404).send('Token not found, place it in .env file');
   }
@@ -43,8 +40,10 @@ app.post('/api/test-token', async (req: Request, res: Response) => {
   );
 });
 
+const tempToken = 't.EaKSOQf4DkeAubaVyGZgLHxK8u_EcV2Lk3kDwx8NCcHhBsKkmk9ap9cqcvfzYHm2BO1opD_EM5PLAZXHc3apzQ';
+
 app.post('/api/get-schedule', async (req: ExchangeScheduleReq, res: Response) => {
-  const {instruments} = createSdk.createSdk(process.env.TOKEN);
+  const {instruments} = createSdk.createSdk(process.env.TOKEN || tempToken);
   console.log('starting making request', req.body);
   const schedule = instruments.tradingSchedules({
     from: new Date(req.body.from),
