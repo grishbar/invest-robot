@@ -61,11 +61,11 @@ app.post('/api/get-schedule', async (req: ExchangeScheduleReq, res: Response) =>
 
 if (process.env.NODE_ENV === 'production') {
   // Serve any static files
-  app.use(express.static(path.join(__dirname, 'client/build')));
+  app.use(express.static(path.join(process.cwd(), 'client/build')));
 
   // Handle React routing, return all requests to React app
   app.get('*', function(req: Request, res: Response) {
-    res.sendFile(path.join(__dirname, 'client/build', 'index.html'));
+    res.sendFile(path.join(process.cwd(), 'client/build', 'index.html'));
   });
 }
 
