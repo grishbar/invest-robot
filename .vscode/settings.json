@@ -1,0 +1,12 @@
+{
+    "editor.bracketPairColorization.enabled": true,
+    "editor.guides.bracketPairs":"active",
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": true,
+        "source.fixAll.stylelint": true
+    },
+    "eslint.validate": [
+        "javascript"
+    ],
+    "typescript.updateImportsOnFileMove.enabled": "always",
+}
