@@ -1,3 +1,6 @@
+# Пример торгового бота на JavaScript
+Пример торгового бота на JavaScript с использованием [Tinkoff Invest API](https://tinkoff.github.io/investAPI/)
+Посмотреть робота можно [тут](https://invest-robot.herokuapp.com/)
 # Установка и запуск проекта
 1. Для установки используйте node v18.2.0 и npm 8.9.0
 2. В корне приложения создайие .env файл и положите туда ваш [API токен](https://tinkoff.github.io/investAPI/token/) в переменную TOKEN
