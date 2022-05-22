@@ -8,9 +8,9 @@
       "typescript": {}
     }
   },
-  "engines" : { 
-    "npm" : ">=8.9.0",
-    "node" : ">=18.2.0"
+  "engines": {
+    "npm": ">=8.9.0",
+    "node": ">=18.2.0"
   },
   "dependencies": {
     "@emotion/react": "^11.9.0",
